@@ -1,12 +1,12 @@
-# Ivan Borges — protótipo de site do portfólio
+# Ivan Borges — site do portfólio
 
-[English](README.md) · [Abrir página em português](pt/index.html) · [Open English page](index.html)
+[English](README.md) · [Visitar o site](https://ivanfborges.github.io/pt/) · [English website](https://ivanfborges.github.io/)
 
-Protótipo local, ainda não publicado, para apresentar o trabalho de Ivan de forma breve e bilíngue. Ele acrescenta uma primeira leitura visual para recrutadores e líderes: dois estudos de caso mostram a pergunta, o resultado da avaliação e a principal limitação, com links para os repositórios técnicos. O perfil do GitHub continua como fonte de detalhes dos projetos.
+Apresentação breve e bilíngue do trabalho de Ivan. Dois estudos de caso visuais mostram a pergunta, o resultado da avaliação e a principal limitação, com links para os repositórios técnicos. O perfil GitHub continua como fonte de detalhes dos projetos.
 
-O site usa apenas HTML e CSS. Não tem analytics, formulários, fontes externas, JavaScript, dependências de build, modelos binários ou dados privados. As duas figuras copiam saídas agregadas já públicas dos projetos. O arquivo [evidence.json](evidence.json) registra hashes e métricas agregadas publicadas. A figura do Airbnb credita o Inside Airbnb (CC BY 4.0).
+O site usa apenas HTML e CSS, publicado pelo GitHub Pages a partir da raiz da branch main. Não tem analytics, formulários, fontes externas, JavaScript, dependências de build, modelos binários ou dados privados. As duas figuras copiam saídas agregadas já públicas dos projetos. O arquivo [evidence.json](evidence.json) registra hashes e métricas agregadas publicadas. A figura do Airbnb credita o Inside Airbnb (CC BY 4.0).
 
-## Visualizar e verificar
+## Visualizar e verificar localmente
 
 Nesta pasta:
 
@@ -14,16 +14,12 @@ Nesta pasta:
 python -m http.server 8000
 ~~~
 
-Abra http://localhost:8000/ para inglês ou http://localhost:8000/pt/ para português. Para parar o servidor, pressione Ctrl+C.
+Abra http://localhost:8000/ para inglês ou http://localhost:8000/pt/ para português. Pare o servidor com Ctrl+C.
 
 ~~~sh
 python scripts/check_site.py
 ~~~
 
-O verificador funciona em um checkout isolado. Se os repositórios Airbnb e TopVistos estiverem em pastas irmãs, compara também suas métricas públicas e os bytes das figuras com o manifesto. O site usa apenas os próprios arquivos e links para os relatórios originais.
+O verificador funciona em um checkout isolado. Se os repositórios Airbnb e TopVistos estiverem em pastas irmãs, compara também suas métricas públicas e os bytes das figuras com o manifesto. Se um resultado de origem mudar, atualize juntas as páginas nos dois idiomas e o manifesto de evidências. Não altere silenciosamente os resultados congelados do Kaggle ou Airbnb.
 
-## Decisão de publicação
-
-Nenhum repositório GitHub, deploy no GitHub Pages, domínio ou serviço pago foi criado para este protótipo. Se Ivan decidir publicá-lo, um repositório público chamado `ivanfborges.github.io` oferece um endereço padrão sem compra de domínio. O [guia oficial do GitHub Pages](https://docs.github.com/en/pages/quickstart) documenta esse caminho. Um domínio próprio é opcional e exigiria decisão separada.
-
-Antes de publicar, Ivan deve revisar a apresentação em primeira pessoa, os fatos profissionais, o tom visual e se um site separado ajuda nas candidaturas. Se algum resultado de origem mudar, atualizar juntas as páginas nos dois idiomas e o manifesto de evidências. Não alterar silenciosamente os resultados congelados do Kaggle ou Airbnb.
+O domínio padrão do GitHub Pages não exige compra de domínio. Os detalhes da publicação estão na [documentação do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).

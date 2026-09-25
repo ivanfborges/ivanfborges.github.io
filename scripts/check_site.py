@@ -66,7 +66,7 @@ for page, document in docs.items():
         parsed = urlsplit(raw)
         if parsed.scheme in ("https", "http"):
             assert parsed.scheme == "https", f"insecure link: {raw}"
-            assert parsed.netloc in ("github.com", "www.linkedin.com", "insideairbnb.com"), f"unexpected host: {raw}"
+            assert parsed.netloc in ("github.com", "www.linkedin.com", "insideairbnb.com", "ivanfborges.github.io"), f"unexpected host: {raw}"
             parts = parsed.path.strip("/").split("/")
             if parsed.netloc == "github.com" and len(parts) >= 5 and parts[0] == "ivanfborges" and parts[2] == "blob":
                 folder = repo_folders.get(parts[1])
