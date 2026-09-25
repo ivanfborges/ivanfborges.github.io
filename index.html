@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Ivan Borges — Data Science, Machine Learning and Geospatial Analytics. Selected case studies with results, methods and limitations.">
+  <title>Ivan Borges | Data Science &amp; Machine Learning</title>
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="pt-BR" href="pt/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ivan Borges, back to top"><span class="brand-mark" aria-hidden="true">IB</span> Ivan Borges</a>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#work">Work</a><a href="#more">More projects</a><a href="#approach">Approach</a><a href="#about">About</a>
+        </nav>
+        <a class="lang-link" href="pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Data Science · Machine Learning · Geospatial Analytics</p>
+          <h1 id="hero-title">Make the evidence visible.</h1>
+          <p class="hero-copy">I am Ivan Borges, a Data Scientist with a background in GIS development, data analysis and data engineering. I build studies that make the question, evaluation and limits as clear as the model.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Explore case studies <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="button button-secondary" href="https://github.com/ivanfborges">View GitHub</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Recorded results from two selected studies">
+          <div class="panel-top">Selected, audited work / 2026</div>
+          <div class="panel-bottom">
+            <p>Results with their context attached.</p>
+            <div class="panel-stats">
+              <div><strong>22.22%</strong><span>lower holdout MAE than baseline · Rio Airbnb</span></div>
+              <div><strong>0.701</strong><span>final macro F1 · TopVistos study</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <p class="section-kicker">01 / Selected case studies</p>
+        <h2 class="section-heading" id="work-title">From a practical question to a defensible result.</h2>
+        <p class="section-intro">These short summaries are entry points. Each repository contains the protocol, reports, code, tests and fuller limitations.</p>
+
+        <article class="case" aria-labelledby="airbnb-title">
+          <div class="case-copy">
+            <span class="case-number">Geospatial machine learning · Rio de Janeiro</span>
+            <h3 id="airbnb-title">Can listing characteristics and location estimate advertised Airbnb prices?</h3>
+            <p>The study keeps hosts separate between training and evaluation, compares baselines with four ML candidates, and examines geographic behavior. The final model and its inference interface are frozen.</p>
+            <div class="result"><strong>BRL 482.67</strong><span>final MAE vs. BRL 620.57 room-type baseline · 22.22% lower</span></div>
+            <p>The result describes one Rio snapshot and advertised nightly prices. It does not establish transaction value, future pricing or production suitability.</p>
+            <div class="case-links"><a href="https://github.com/ivanfborges/eng_dados-analytics_engineering/blob/main/docs/FINAL.md">Read final report ↗</a><a href="https://github.com/ivanfborges/eng_dados-analytics_engineering">Explore repository ↗</a></div>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/airbnb-training-map.png" alt="Map of median advertised prices in supported Rio neighbourhoods from the training data" width="1996" height="1068" loading="lazy">
+            <figcaption>Training-data geography, shown for exploration. The final model result above is from a separate host-held-out evaluation. <a href="https://github.com/ivanfborges/eng_dados-analytics_engineering/blob/main/docs/EDA.md">EDA source</a> · Data: <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a> (CC BY 4.0) · <a href="assets/airbnb-training-map.png">Full-size map</a>.</figcaption>
+          </figure>
+        </article>
+
+        <article class="case" aria-labelledby="topvistos-title">
+          <div class="case-copy">
+            <span class="case-number">Classification · Kaggle study</span>
+            <h3 id="topvistos-title">How well does a reproducible classifier predict the historical case label?</h3>
+            <p>TopVistos compares seven model configurations. Preprocessing stays inside training folds, and the 0.60 approval threshold was selected on validation data before the final holdout was evaluated.</p>
+            <div class="result"><strong>0.701</strong><span>macro F1 on 3,568 final-holdout cases · 95% bootstrap interval 0.686–0.717</span></div>
+            <p>Errors vary across education groups. This historical-label study is not validated for visa eligibility or automated immigration decisions.</p>
+            <div class="case-links"><a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA/blob/main/docs/EVALUATION.md">Read final report ↗</a><a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA">Explore repository ↗</a></div>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/topvistos-final-evaluation.png" alt="Final holdout classification performance and calibration charts for the TopVistos study" width="1961" height="827" loading="lazy">
+            <figcaption>Final holdout performance and calibration from the published study. The original competition ranking was not independently verified. <a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA/blob/main/docs/EVALUATION.md">Evaluation source</a> · <a href="assets/topvistos-final-evaluation.png">Full-size chart</a>.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="more" aria-labelledby="more-title">
+      <div class="container">
+        <p class="section-kicker">02 / More work</p>
+        <h2 class="section-heading" id="more-title">Learning, testing and building.</h2>
+        <p class="section-intro">The portfolio also includes a hands-on ML curriculum, a bounded software-testing study and a personal application.</p>
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-label">Applied AI · Study lab</p>
+            <h3>Applied AI Engineering Lab</h3>
+            <p>Implemented foundations and classical ML topics with numerical code, synthetic visual experiments and tests. The roadmap distinguishes planned topics from delivered studies.</p>
+            <a href="https://github.com/ivanfborges/applied-ai-engineering-lab">Explore the lab ↗</a>
+          </article>
+          <article class="card">
+            <p class="card-label">Research · Software testing</p>
+            <h3>EvoSuite vs. LLM</h3>
+            <p>An archived, one-class comparison of test generation using coverage and mutation evidence. The LLM suite was refined with PIT feedback; broader conclusions require a new protocol.</p>
+            <a href="https://github.com/ivanfborges/sbst-vs-llm">Read the study ↗</a>
+          </article>
+          <article class="card">
+            <p class="card-label">Personal project · Product</p>
+            <h3>World Cup 2026 Sticker Album</h3>
+            <p>A local-first collection tracker with browser storage, JSON backups, report exports and automated tests. A separate example of product-oriented implementation.</p>
+            <a href="https://github.com/ivanfborges/album-copa-2026-local">Explore the app ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <p class="section-kicker">03 / How the work is evaluated</p>
+        <h2 class="section-heading" id="approach-title">Decisions that can be inspected.</h2>
+        <p class="section-intro">The case studies document their evaluation choices and the boundary between recorded results and future possibilities.</p>
+        <div class="method-grid">
+          <div class="method"><span class="method-num">01</span><h3>Separate development from final evidence</h3><p>Thresholds and model choices are made before the final holdout. Airbnb also separates hosts to reduce overlap between training and evaluation.</p></div>
+          <div class="method"><span class="method-num">02</span><h3>Make the workflow traceable</h3><p>Protocols, reports, automated tests and inference examples let readers inspect how each result was produced and used.</p></div>
+          <div class="method"><span class="method-num">03</span><h3>State where evidence stops</h3><p>Snapshot scope, segment errors, synthetic examples and missing production validation are explicit parts of the work.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="about" aria-labelledby="about-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">04 / Background &amp; contact</p>
+          <h2 id="about-title">Let the work start a conversation.</h2>
+        </div>
+        <div>
+          <p>I have a degree in Forest Engineering and postgraduate studies in Artificial and Computational Intelligence. My background spans data science, data analysis, GIS development and data engineering. My professional history is available on LinkedIn.</p>
+          <div class="hero-actions"><a class="button" href="https://www.linkedin.com/in/ivanfborges/">Connect on LinkedIn ↗</a><a class="button button-secondary" href="mailto:ivanfborges@gmail.com">Email me</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© 2026 Ivan Borges · Case-study summaries link to the source repositories.</span><a href="pt/" lang="pt-BR" hreflang="pt-BR">Ler em português</a></div>
+  </footer>
+</body>
+</html>

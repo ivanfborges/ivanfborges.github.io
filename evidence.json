@@ -1,0 +1,28 @@
+{
+  "as_of": "2026-09-25",
+  "purpose": "Public aggregate evidence for a local portfolio-site prototype; no individual records or model binaries.",
+  "airbnb": {
+    "repository": "https://github.com/ivanfborges/eng_dados-analytics_engineering",
+    "source_commit": "f789791bfb776fc97654e293c11f5edaff0ebe7c",
+    "metrics_path": "docs/final/metrics.json",
+    "metrics_sha256": "e53b11cde973c5067e3c5c2da0431dcd150eab43cebe0bbe3ef1ae2d3dec7dd5",
+    "mae_brl": 482.6728853712199,
+    "baseline_mae_brl": 620.5712494244053,
+    "training_map_path": "docs/eda/neighbourhood_prices.png",
+    "training_map_sha256": "54c3bfa440883fd1b9ec3391610c6fb1d6e94d04dc71e00ea8ec15a311179a98"
+  },
+  "topvistos": {
+    "repository": "https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA",
+    "source_commit": "02e3f5bab840061b5a11e0208672bb6d90a8948f",
+    "metrics_path": "docs/evaluation/metrics.json",
+    "metrics_sha256": "d962b60ff0b0d6f16a9357b3da9f33fef5a5adb983947f12d3af7bcda8354224",
+    "holdout_rows": 3568,
+    "macro_f1": 0.7012404839283473,
+    "macro_f1_95ci": [
+      0.6858395480451385,
+      0.7169279758258363
+    ],
+    "evaluation_chart_path": "docs/evaluation/evaluation.png",
+    "evaluation_chart_sha256": "2d14e3e7c4349bade9a4db69dd638d28a95f76b511eccbf622b39cec93003cd8"
+  }
+}

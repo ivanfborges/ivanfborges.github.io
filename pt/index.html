@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Ivan Borges — Ciência de Dados, Machine Learning e Análise Geoespacial. Estudos de caso com resultados, métodos e limitações.">
+  <title>Ivan Borges | Ciência de Dados e Machine Learning</title>
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="pt-BR" href="./">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ivan Borges, voltar ao início"><span class="brand-mark" aria-hidden="true">IB</span> Ivan Borges</a>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="#work">Projetos</a><a href="#more">Outros trabalhos</a><a href="#approach">Método</a><a href="#about">Sobre</a>
+        </nav>
+        <a class="lang-link" href="../" lang="en" hreflang="en">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Ciência de Dados · Machine Learning · Análise Geoespacial</p>
+          <h1 id="hero-title">Evidências que sustentam decisões.</h1>
+          <p class="hero-copy">Sou Ivan Borges, Cientista de Dados com experiência em desenvolvimento GIS, análise de dados e engenharia de dados. Desenvolvo estudos que deixam a pergunta, a avaliação e os limites tão claros quanto o modelo.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Explorar estudos de caso <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="button button-secondary" href="https://github.com/ivanfborges">Ver GitHub</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Resultados registrados em dois estudos selecionados">
+          <div class="panel-top">Trabalhos selecionados e auditados / 2026</div>
+          <div class="panel-bottom">
+            <p>Resultados acompanhados de contexto.</p>
+            <div class="panel-stats">
+              <div><strong>22,22%</strong><span>menos MAE no teste final que o baseline · Airbnb Rio</span></div>
+              <div><strong>0,701</strong><span>F1 macro final · estudo TopVistos</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <p class="section-kicker">01 / Estudos de caso</p>
+        <h2 class="section-heading" id="work-title">Da pergunta prática ao resultado verificável.</h2>
+        <p class="section-intro">Estes resumos são pontos de entrada. Cada repositório traz protocolo, relatórios, código, testes e limitações mais completas.</p>
+
+        <article class="case" aria-labelledby="airbnb-title">
+          <div class="case-copy">
+            <span class="case-number">Machine Learning geoespacial · Rio de Janeiro</span>
+            <h3 id="airbnb-title">Características e localização ajudam a estimar preços anunciados no Airbnb?</h3>
+            <p>O estudo separa anfitriões entre treino e avaliação, compara baselines com quatro candidatos de ML e examina o comportamento geográfico. O modelo final e sua interface de inferência estão congelados.</p>
+            <div class="result"><strong>R$ 482,67</strong><span>MAE final vs. R$ 620,57 do baseline por tipo · 22,22% menor</span></div>
+            <p>O resultado descreve preços anunciados em um snapshot do Rio. Não demonstra valor de transação, preço futuro ou adequação à produção.</p>
+            <div class="case-links"><a href="https://github.com/ivanfborges/eng_dados-analytics_engineering/blob/main/docs/FINAL.pt-BR.md">Ler relatório final ↗</a><a href="https://github.com/ivanfborges/eng_dados-analytics_engineering">Explorar repositório ↗</a></div>
+          </div>
+          <figure class="case-figure">
+            <img src="../assets/airbnb-training-map.png" alt="Mapa das medianas de preços anunciados nos bairros do Rio com suporte suficiente no treino" width="1996" height="1068" loading="lazy">
+            <figcaption>Geografia do treino, usada na exploração. O resultado final acima vem de uma avaliação separada por anfitrião. <a href="https://github.com/ivanfborges/eng_dados-analytics_engineering/blob/main/docs/EDA.pt-BR.md">Fonte da EDA</a> · Dados: <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a> (CC BY 4.0) · <a href="../assets/airbnb-training-map.png">Abrir mapa em tamanho real</a>.</figcaption>
+          </figure>
+        </article>
+
+        <article class="case" aria-labelledby="topvistos-title">
+          <div class="case-copy">
+            <span class="case-number">Classificação · estudo Kaggle</span>
+            <h3 id="topvistos-title">Como um classificador reproduzível prevê o rótulo histórico dos casos?</h3>
+            <p>O TopVistos compara sete configurações de modelos. O pré-processamento fica dentro dos folds de treino, e o limiar de aprovação 0,60 foi selecionado na validação antes do teste final.</p>
+            <div class="result"><strong>0,701</strong><span>F1 macro em 3.568 casos do teste final · intervalo bootstrap de 95%: 0,686–0,717</span></div>
+            <p>Os erros variam entre grupos de escolaridade. O estudo do rótulo histórico não foi validado para determinar elegibilidade a vistos ou automatizar decisões migratórias.</p>
+            <div class="case-links"><a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA/blob/main/docs/EVALUATION.pt-BR.md">Ler relatório final ↗</a><a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA">Explorar repositório ↗</a></div>
+          </div>
+          <figure class="case-figure">
+            <img src="../assets/topvistos-final-evaluation.png" alt="Gráficos de desempenho e calibração do classificador no teste final do TopVistos" width="1961" height="827" loading="lazy">
+            <figcaption>Desempenho e calibração no teste final do estudo publicado. A posição original na competição não foi verificada de forma independente. <a href="https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA/blob/main/docs/EVALUATION.pt-BR.md">Fonte da avaliação</a> · <a href="../assets/topvistos-final-evaluation.png">Abrir gráfico em tamanho real</a>.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="more" aria-labelledby="more-title">
+      <div class="container">
+        <p class="section-kicker">02 / Outros trabalhos</p>
+        <h2 class="section-heading" id="more-title">Estudar, testar e construir.</h2>
+        <p class="section-intro">O portfólio também inclui um laboratório prático de ML, um estudo delimitado de testes de software e uma aplicação pessoal.</p>
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-label">IA aplicada · Laboratório</p>
+            <h3>Applied AI Engineering Lab</h3>
+            <p>Fundamentos e tópicos de ML clássico implementados com código numérico, experimentos visuais sintéticos e testes. O roteiro distingue tópicos planejados dos estudos entregues.</p>
+            <a href="https://github.com/ivanfborges/applied-ai-engineering-lab">Explorar laboratório ↗</a>
+          </article>
+          <article class="card">
+            <p class="card-label">Pesquisa · Testes de software</p>
+            <h3>EvoSuite × LLM</h3>
+            <p>Comparação arquivada de uma classe, com evidências de cobertura e mutação. A suíte LLM foi refinada com feedback do PIT; conclusões mais amplas exigem novo protocolo.</p>
+            <a href="https://github.com/ivanfborges/sbst-vs-llm">Ler estudo ↗</a>
+          </article>
+          <article class="card">
+            <p class="card-label">Projeto pessoal · Produto</p>
+            <h3>Álbum da Copa 2026</h3>
+            <p>Aplicação local para acompanhar figurinhas, com armazenamento no navegador, backups JSON, exportação de relatórios e testes automatizados. Um exemplo diferente de implementação orientada ao uso.</p>
+            <a href="https://github.com/ivanfborges/album-copa-2026-local">Explorar aplicação ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <p class="section-kicker">03 / Como o trabalho é avaliado</p>
+        <h2 class="section-heading" id="approach-title">Decisões que podem ser inspecionadas.</h2>
+        <p class="section-intro">Os estudos de caso documentam escolhas de avaliação e o limite entre os resultados registrados e as possibilidades futuras.</p>
+        <div class="method-grid">
+          <div class="method"><span class="method-num">01</span><h3>Separar desenvolvimento da evidência final</h3><p>Limiares e modelos são escolhidos antes do teste final. O Airbnb também separa anfitriões para reduzir sobreposição entre treino e avaliação.</p></div>
+          <div class="method"><span class="method-num">02</span><h3>Tornar o fluxo rastreável</h3><p>Protocolos, relatórios, testes automatizados e exemplos de inferência permitem examinar como cada resultado foi produzido e usado.</p></div>
+          <div class="method"><span class="method-num">03</span><h3>Mostrar onde a evidência termina</h3><p>Escopo do snapshot, erros por segmento, exemplos sintéticos e ausência de validação em produção fazem parte da apresentação.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="about" aria-labelledby="about-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">04 / Trajetória e contato</p>
+          <h2 id="about-title">O trabalho pode iniciar uma conversa.</h2>
+        </div>
+        <div>
+          <p>Sou formado em Engenharia Florestal e pós-graduado em Inteligência Artificial e Computacional. Minha trajetória reúne Ciência de Dados, análise de dados, desenvolvimento GIS e engenharia de dados. O histórico profissional está no LinkedIn.</p>
+          <div class="hero-actions"><a class="button" href="https://www.linkedin.com/in/ivanfborges/">Conectar pelo LinkedIn ↗</a><a class="button button-secondary" href="mailto:ivanfborges@gmail.com">Enviar e-mail</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© 2026 Ivan Borges · Os resumos dos estudos apontam para os repositórios originais.</span><a href="../" lang="en" hreflang="en">Read in English</a></div>
+  </footer>
+</body>
+</html>
