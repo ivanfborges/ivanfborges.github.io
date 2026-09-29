@@ -12,7 +12,7 @@
   --shadow: 0 24px 70px rgba(21, 44, 38, .09);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body {
   margin: 0;
   background: var(--paper);
@@ -110,9 +110,13 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 640px) {
   .container { width: min(100% - 2rem, 1180px); }
-  .header-inner { min-height: 66px; }
-  .site-nav { display: none; }
-  .lang-link { border: 0; padding: 0; }
+  .header-inner { min-height: 66px; flex-wrap: wrap; gap: .2rem; padding-block: .45rem; }
+  .brand { margin-right: auto; }
+  .header-actions { display: contents; }
+  .site-nav { order: 2; display: flex; flex: 0 0 100%; justify-content: space-between; gap: .5rem; overflow-x: auto; padding: .3rem 0 .2rem; white-space: nowrap; }
+  .site-nav a { font-size: .78rem; }
+  .lang-link { order: 1; border: 0; padding: 0; }
+  html { scroll-padding-top: 7.5rem; }
   .hero { padding-top: 3.4rem; }
   .hero-panel { min-height: 295px; }
   .card-grid, .method-grid { grid-template-columns: 1fr; }
